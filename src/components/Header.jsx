@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <h1>
-        <span><HighlightIcon/></span>
+        <span><HighlightIcon fontSize="3rem" /></span>
         Keeper
       </h1>
     </header>

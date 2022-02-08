@@ -106,11 +106,7 @@ form.create-note button {
   outline: none;
 }
 
-@media screen and (max-width: 750px) {
-  body {
-    background-color: lightgreen;
-  }
-}
+
 
 
 /* yellow Color #f5ba13 */
