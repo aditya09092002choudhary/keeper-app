@@ -1,32 +1,32 @@
-@media screen and (min-width: 200px) {
-    
-    header h1,header span{
-        font-size: 3rem;
-    }
-    .highlight{
-        font-size: 3rem;
-    }
-    form.create-note input,
-form.create-note textarea {
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.8em;
-  font-family: inherit;
-  resize: none;
-}
-form.create-note{
-    width: 70%;
-}
-    .notes{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .note{
-        width: 45%;
-        margin: 20px;
-        /* font-size: 20px; */
-    }
+@media screen and (max-width:750px) {
+  header h1,
+  header span {
+    font-size: 3rem;
   }
+  .highlight {
+    font-size: 3rem;
+  }
+  form.create-note input,
+  form.create-note textarea {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.8em;
+    font-family: inherit;
+    resize: none;
+  }
+  form.create-note {
+    width: 70%;
+  }
+  .notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .note {
+    width: 45%;
+    margin: 20px;
+    font-size: 20px;
+  }
+}
