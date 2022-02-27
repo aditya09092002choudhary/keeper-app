@@ -26,8 +26,8 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    
     event.preventDefault();
+    if(note.title!==""||note.content!==""){
     Axios.post(`${ENDPOINT}/send`,({title:note.title,content:note.content}))
     setNote({
       title: "",
@@ -35,7 +35,10 @@ function CreateArea(props) {
     });
     setTimeout(() => {
       window.location.reload();
-    }, 1000);
+    }, 700);
+  } else {
+    window.alert("Input field cannot be empty !");
+  }
   }
 
 

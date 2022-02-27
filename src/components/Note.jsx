@@ -18,7 +18,7 @@ function Note(props) {
     Axios.post(`${ENDPOINT}/delete`, { id: event.target.value });
     setTimeout(() => {
       window.location.reload();
-    }, 1000);
+    }, 700);
   }
 
   return notes.map((note, i) => {

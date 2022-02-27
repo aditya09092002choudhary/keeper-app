@@ -3,20 +3,18 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import './App.css';
+import "./App.css";
 
 function App() {
-
   return (
-    <div >
+    <div>
       <Header />
       <CreateArea />
 
       <div className="notes">
-      
         <Note />
-        </div>
-        
+      </div>
+
       <Footer />
     </div>
   );
