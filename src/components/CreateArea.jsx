@@ -26,13 +26,18 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    // event.preventDefault();
+    
+    event.preventDefault();
     Axios.post(`${ENDPOINT}/send`,({title:note.title,content:note.content}))
     setNote({
       title: "",
       content: "",
     });
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
+
 
   function expand() {
     setExpanded(true);

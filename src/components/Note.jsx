@@ -14,8 +14,11 @@ function Note(props) {
   console.log(notes);
 
   function handleClick(event) {
-    console.log(event.target.value);
+    event.preventDefault();
     Axios.post(`${ENDPOINT}/delete`, { id: event.target.value });
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
 
   return notes.map((note, i) => {
