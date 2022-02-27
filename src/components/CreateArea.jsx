@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
+import Axios from 'axios';
+
+const ENDPOINT = 'http://localhost:8080';
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
@@ -23,12 +26,12 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    props.onAdd(note);
+    // event.preventDefault();
+    Axios.post(`${ENDPOINT}/send`,({title:note.title,content:note.content}))
     setNote({
       title: "",
       content: "",
     });
-    event.preventDefault();
   }
 
   function expand() {
@@ -37,7 +40,7 @@ function CreateArea(props) {
 
   return (
     <div className="create-form">
-      <form method="post" action="/data" className="create-note">
+      <form  className="create-note">
         {isExpanded && (
           <input
             name="title"
