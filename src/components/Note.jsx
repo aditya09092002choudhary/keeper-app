@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Axios from "axios";
 
-const ENDPOINT = "https://backend-keeper-app.herokuapp.com/";
+const ENDPOINT = "https://backend-keeper-app.herokuapp.com";
 
 function Note(props) {
   const [notes, setNotes] = useState([]);

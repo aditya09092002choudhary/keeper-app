@@ -4,7 +4,7 @@ import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
 import Axios from 'axios';
 
-const ENDPOINT = 'https://backend-keeper-app.herokuapp.com/';
+const ENDPOINT = 'https://backend-keeper-app.herokuapp.com';
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
