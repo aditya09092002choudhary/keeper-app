@@ -1,0 +1,26 @@
+.navbar-container{
+    /* border: 1px solid; */
+    padding: 20px 10px 20px 40px;
+    box-sizing: border-box;
+    background-color: var(--dark-color);
+    color: white;
+    font-family: cursive;
+}
+
+.navbar-container .navbar h1{
+    line-height: 0;
+}
+
+.navbar-container .navbar span{
+    /* margin-left: 20px; */
+    font-size: 13px;
+    position: relative;
+    bottom: 10px;
+}
+
+@media screen and (max-width:700px) {
+    .navbar-container{
+        padding: 5px 15px;
+        width: 100%;
+    }
+}

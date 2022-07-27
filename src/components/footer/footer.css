@@ -1,0 +1,12 @@
+.footer-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    background: var(--dark-color);
+    font-family: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
