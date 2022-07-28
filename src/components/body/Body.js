@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './body.css';
 import axios from 'axios';
-const urlPath="http://localhost:3001/"
+// const urlPath = "http://localhost:3001/"
+const urlPath = "https://backend-keeper-app.herokuapp.com/";
 const Body = () => {
     const [title,setTitle]=useState("");
     const [content,setContent] = useState("");
@@ -13,7 +14,7 @@ const Body = () => {
         })
     },[]);
     function handleClick(){
-        if(title.trim().length!=0 && title.trim().length!=0){
+        if(title.trim().length!==0 && title.trim().length!==0){
             console.log(title,content);
             axios.post(urlPath+"savenote",{title,content}).then((res)=>{
                 console.log(res.data);
