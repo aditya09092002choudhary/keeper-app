@@ -9,19 +9,19 @@ const Body = () => {
     const [data,setData] = useState([]);
     useEffect(()=>{
         axios.get(urlPath).then((res)=>{
-            console.log(res);
+            // console.log(res);
             setData(res.data);
         })
     },[]);
     function handleClick(){
         if(title.trim().length!==0 && title.trim().length!==0){
-            console.log(title,content);
+            // console.log(title,content);
             axios.post(urlPath+"savenote",{title,content}).then((res)=>{
                 if(res.data==="Saved Successfully"){
                     window.alert("Note is saved successfully");
                     window.location.reload();
                 }
-                console.log(res.data);
+                // console.log(res.data);
             })
         }
     }
@@ -43,13 +43,13 @@ const Body = () => {
             <div className="notes-container">
                 <h1>All Notes</h1>
                 {(data.length!==0)?<div className="allNotes">
-                      {data.map((note,i)=>{
+                      {[...data].reverse().map((note,i)=>{
                         return <div className="note" key={i}>
                         <div className="title">
                             <h2>{note.title.substr(0,15)+"..."}</h2>
                         </div>
                         <div className="content">
-                            <p>{note.content.substr(0,30)+"..."}<a href={"/note/"+note._id}>Read more</a></p>
+                            <p>{note.content.substr(0,80)+"..."}<a href={"/note/"+note._id}>Read more</a></p>
                         </div>
                     </div>
                     })}
