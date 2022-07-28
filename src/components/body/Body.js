@@ -17,6 +17,10 @@ const Body = () => {
         if(title.trim().length!==0 && title.trim().length!==0){
             console.log(title,content);
             axios.post(urlPath+"savenote",{title,content}).then((res)=>{
+                if(res.data==="Saved Successfully"){
+                    window.alert("Note is saved successfully");
+                    window.location.reload();
+                }
                 console.log(res.data);
             })
         }
@@ -38,18 +42,18 @@ const Body = () => {
             </div>
             <div className="notes-container">
                 <h1>All Notes</h1>
-                <div className="allNotes">
-                    {data.map((note,i)=>{
+                {(data.length!==0)?<div className="allNotes">
+                      {data.map((note,i)=>{
                         return <div className="note" key={i}>
                         <div className="title">
                             <h2>{note.title.substr(0,15)+"..."}</h2>
                         </div>
                         <div className="content">
-                            <p>{note.content.substr(0,30)+"..."}</p>
+                            <p>{note.content.substr(0,30)+"..."}<a href={"/note/"+note._id}>Read more</a></p>
                         </div>
                     </div>
                     })}
-                </div>
+                </div>:<div style={{textAlign:"center"}}><img src='https://sales.ufaber.com/public/static/img/loader-orange.gif' width={35} alt='loading'/></div>}
             </div>
         </div>
     );

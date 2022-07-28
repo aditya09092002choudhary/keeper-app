@@ -1,0 +1,50 @@
+.note-container{
+    /* border: 1px solid; */
+    margin-top: 40px;
+    padding: 10px 30px 40px;
+    background-color: white;
+}
+
+.note-container .note>h1{
+    text-decoration: underline double;
+    color: var(--dark-color);
+}
+
+.note-container .note-body{
+    /* border: 1px solid;  */
+    border-radius: 5px;
+    box-shadow: 0 0 5px gray;
+    padding: 10px 20px 20px;
+}
+
+.note-container .note-body .exit{
+    text-align: end;
+    font-size: 20px;
+}
+
+.note-container .note-body .exit a{
+    text-decoration: none;
+}
+
+.note-container .note-body h1{
+    line-height: .9;
+    word-break: break-all;
+}
+.note-container .note-body .date{
+    font-size: 13px;
+    margin-left: 5px;
+    position: relative;
+    bottom:6px;
+    color: rgb(109, 109, 109);
+}
+
+.note-container .note-body p{
+    font-weight: 300;
+    word-break: break-all;
+}
+
+@media screen and (max-width:600px){
+    .note-container{
+        padding: 10px;
+    }
+}
