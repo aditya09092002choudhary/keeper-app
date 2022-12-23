@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom';
 
 // const urlPath = "http://localhost:3001/"
-const urlPath = "https://backend-keeper-app.herokuapp.com/";
+const urlPath = "https://keeper-app-backend.onrender.com/";
 const Note = () => {
     const {id}=useParams();
     // console.log(id);

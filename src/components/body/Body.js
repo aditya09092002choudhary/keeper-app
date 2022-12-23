@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './body.css';
 import axios from 'axios';
 // const urlPath = "http://localhost:3001/"
-const urlPath = "https://backend-keeper-app.herokuapp.com/";
+const urlPath = "https://keeper-app-backend.onrender.com/";
 const Body = () => {
     const [title,setTitle]=useState("");
     const [content,setContent] = useState("");
